@@ -1,0 +1,160 @@
+:root{
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light-orange: hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+
+
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+    background: var(--Very-dark-blue);
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+h4,h6{
+    font-size: .75rem;
+    font-weight: 400;
+    color: var(--Pale-Blue);
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 13rem 13rem 13rem 13rem;
+    grid-template-rows: 12.25rem 12.25rem;
+    gap: 1.5rem;
+}
+
+.main {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.personal-info{
+    height: 14rem;
+    padding: 1.75rem;
+    background-color: var(--Blue);
+    border-radius: .75rem;
+}
+.personal-info img{
+    width: 3.75rem;
+    border-radius: 50%;
+    border:  3px solid #fff;
+    margin: 0 0 2rem;
+}
+.personal-info h2{
+    font-weight: 300;
+    font-size: 2rem;
+}
+.sort-by-time{
+    padding: 1.75rem;
+    background-color: var(--Dark-blue);
+    height: 6rem;
+    position: relative;
+    bottom: 1rem;
+    z-index: -1;
+    border-radius: 0 0 .75rem .75rem;
+    display: grid;
+}
+.sort-by-time h4{
+    align-self: end;
+    font-size: 1rem;
+    color: var(--Desaturated-blue);
+}
+.sort-by-time .selected{
+    color: var(--Pale-Blue);
+}
+.category{
+    height: 12.25rem;
+    width: 13rem;
+    border-radius: .75rem;
+    display: grid;
+    align-content: end;
+    overflow: hidden;
+
+}
+.category .sub-img{
+    height: 3.75rem;
+    display: grid;
+    position: relative;
+    top: 1rem;
+    z-index: -1;
+}
+
+.sub-img img{
+    margin: 0 20px 0 auto;
+    width: 4rem;
+}
+.work .sub-img{
+    background-color: var(--Light-orange);
+}
+.play .sub-img{
+    background-color: var(--Soft-blue);
+}
+.study .sub-img{
+    background-color: var(--Light-red);
+}
+.exercise .sub-img{
+    top: 1.45rem;
+    background-color: var(--Lime-green);
+}
+.social .sub-img{
+    background-color: var(--Violet);
+}
+.self-care .sub-img{
+    top: .75rem;
+    background-color: var(--Soft-orange);
+}
+.category .detail{
+    height: 7rem;
+    padding: 1.5rem;
+    border-radius: .75rem;
+    background-color: var(--Dark-blue);
+}
+.detail div{
+    height: 1rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail div h3{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.detail h1{
+    font-size: 2.75rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
