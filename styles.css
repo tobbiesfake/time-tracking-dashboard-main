@@ -74,11 +74,11 @@ h4,h6{
 }
 .sort-by-time::before{
     content: '';
-    height: 2rem;
-    width: 13rem;
-    border: none;
+    height: 2.5rem;
+    width: 100%;
+    left: 0;
+    top: -1.75rem;
     position: absolute;
-    transform: translate(-1.75rem, -3rem );
     z-index: -1;
     background-color: var(--Dark-blue);
 }
