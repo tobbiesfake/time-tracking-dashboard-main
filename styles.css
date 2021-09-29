@@ -8,7 +8,6 @@
     --Violet: hsl(264, 64%, 52%);
     --Soft-orange: hsl(43, 84%, 65%);
 
-
     --Very-dark-blue: hsl(226, 43%, 10%);
     --Dark-blue: hsl(235, 46%, 20%);
     --Desaturated-blue: hsl(235, 45%, 61%);
@@ -52,6 +51,7 @@ h4,h6{
     padding: 1.75rem;
     background-color: var(--Blue);
     border-radius: .75rem;
+    pointer-events: none;
 }
 .personal-info img{
     width: 3.75rem;
@@ -66,17 +66,30 @@ h4,h6{
 .sort-by-time{
     padding: 1.75rem;
     background-color: var(--Dark-blue);
-    height: 6rem;
-    position: relative;
-    bottom: 1rem;
-    z-index: -1;
+    height: 5rem;
     border-radius: 0 0 .75rem .75rem;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sort-by-time::before{
+    content: '';
+    height: 2rem;
+    width: 13rem;
+    border: none;
+    position: absolute;
+    transform: translate(-1.75rem, -3rem );
+    z-index: -1;
+    background-color: var(--Dark-blue);
 }
 .sort-by-time h4{
-    align-self: end;
+    align-self: start;
     font-size: 1rem;
     color: var(--Desaturated-blue);
+}
+.sort-by-time h4:hover{
+    cursor: pointer;
+    color: var(--Pale-Blue);
 }
 .sort-by-time .selected{
     color: var(--Pale-Blue);
@@ -128,12 +141,21 @@ h4,h6{
     border-radius: .75rem;
     background-color: var(--Dark-blue);
 }
+.category .detail:hover{
+    background-color: var(--Desaturated-blue);
+}
 .detail div{
     height: 1rem;
     margin-bottom: 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.ellipsis {
+    cursor: pointer;
+}
+.ellipsis:hover{
+    filter: invert(60%) sepia(0%) saturate(7418%) hue-rotate(132deg) brightness(105%) contrast(107%);
 }
 
 .detail div h3{
@@ -148,13 +170,14 @@ h4,h6{
 
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
+    font-size: 12px;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 10px;
+    right: 10px;
 }
 
 .attribution a {
+    font-size: 15px;
     color: hsl(228, 45%, 44%);
+    text-decoration: none;
 }
