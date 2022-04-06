@@ -39,6 +39,9 @@ h4,h6{
     grid-template-columns: 13rem 13rem 13rem 13rem;
     grid-template-rows: 12.25rem 12.25rem;
     gap: 1.5rem;
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
 .main {
@@ -102,7 +105,6 @@ h4,h6{
     display: grid;
     align-content: end;
     overflow: hidden;
-
 }
 .category .sub-img{
     height: 3.75rem;
@@ -181,4 +183,36 @@ h4,h6{
     font-size: 15px;
     color: hsl(228, 45%, 44%);
     text-decoration: none;
+}
+
+@keyframes fadeUp {
+    0%{
+        transform: translateY(-2rem);
+        filter: blur(0.5rem);
+        opacity: 0.25;
+    }
+    100%{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+        filter: blur(1rem);
+    }
+    15%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+.animation{
+    animation-name: fadeUp;
+    animation-duration: .5s;
+    animation-timing-function: ease;
 }
