@@ -22,6 +22,7 @@ Users should be able to:
 - Give the general solution in my mind
 - Start coding Structure.
 - Markup with CSS
+- Add some JS to get user's data.
 - DONE!
 
 ### Built with
@@ -30,6 +31,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+-Javascript
 
 ## Author
 
